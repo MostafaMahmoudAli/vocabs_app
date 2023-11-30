@@ -5,7 +5,7 @@ import 'package:vocabs_note/core/app_strings.dart';
 import 'package:vocabs_note/features/layout/presentation/cubits/read_word_cubit/read_word_cubit.dart';
 import 'package:vocabs_note/features/layout/presentation/cubits/write_word_cubit/write_word_cubit.dart';
 import 'arabic_or_english_selected_widget.dart';
-import 'custom_button.dart';
+import '../../../../core/custom_done_button.dart';
 import 'custom_text_form_field.dart';
 import 'dialog_background_color.dart';
 
@@ -56,7 +56,7 @@ class AddWordDialog extends StatelessWidget
                       formKey:formKey,
                     ),
                     SizedBox(height:10.0.h,),
-                    CustomButton(
+                    CustomDoneButton(
                       colorCode: context.read<WriteWordCubit>().colorCode,
                       onTap:()
                       {

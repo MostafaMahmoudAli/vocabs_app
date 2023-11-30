@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/app_colors.dart';
-import '../../../../core/app_strings.dart';
+import 'app_colors.dart';
+import 'app_strings.dart';
 
-class CustomButton extends StatelessWidget {
-  const CustomButton({Key? key, required this.colorCode, required this.onTap}) : super(key: key);
+class CustomDoneButton extends StatelessWidget {
+  const CustomDoneButton({Key? key, required this.colorCode, required this.onTap}) : super(key: key);
   final int colorCode;
   final GestureTapCallback onTap;
   @override
