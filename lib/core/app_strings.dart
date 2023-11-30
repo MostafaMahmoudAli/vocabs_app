@@ -11,6 +11,11 @@ abstract class AppStrings
   static const String sortingTypeTitleOfFilterFields = "Sorting Type";
   static const String noWordsListTitle = "There are no words uploaded yet";
   static const String wordDetailsTitle = "Word Details";
+  static const String wordTitle = "Word";
+  static const String similarWordTitle = "Similar Word ";
+  static const String exampleTitle = "Example";
+  static const String newExampleTextFieldTitle = "New Example";
+  static const String newSimilarWordTextFieldTitle = "New Similar Word";
   static const List<String> textLabelsOfLanguageFiltersFields = ["Arabic ","English" ,"AllWords"];
   static const List<String> textLabelsOfSortedByFiltersFields = ["Time ","Word Length",];
   static const List<String> textLabelsOfSortingTypeFiltersFields = ["Ascending ","Descending",];

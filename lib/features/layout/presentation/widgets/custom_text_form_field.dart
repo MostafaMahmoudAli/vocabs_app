@@ -75,7 +75,7 @@ String?validation({String? value, required bool isArabic})
     CharType charType = _getCharacterType(value.codeUnitAt(i));
     if(charType == CharType.notValidCharacter)
     {
-      return "Character number${i+1} is not valid character";
+      return "Character number${i+1} is not a valid character";
     }else if (charType == CharType.arabic&&isArabic==false)
     {
       return "Character number${i+1} is not an English letter";
