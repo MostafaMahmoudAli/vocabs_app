@@ -3,7 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/app_colors.dart';
 
-class ExceptionWidget extends StatelessWidget {
+class ExceptionWidget extends StatelessWidget
+{
   const ExceptionWidget(
       {Key? key, required this.message, required this.iconData})
       : super(key: key);
@@ -11,29 +12,30 @@ class ExceptionWidget extends StatelessWidget {
   final IconData iconData;
 
   @override
-  Widget build(BuildContext context)
-  {
+  Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment:MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
+       SizedBox(
+         height:200.0.h,
+       ),
         Icon(
-            iconData,
-          color:  AppColors.white,
-          size:50,
+          iconData,
+          color: AppColors.white,
+          size: 50,
         ),
-    Center(
-    child: Text(
-    message,
-      textAlign:TextAlign.center,
-      style: TextStyle(
-        color: AppColors.white,
-        fontWeight: FontWeight.w900,
-        fontSize: 25.0.sp,
-      ),
-    ),
-    ),
-    ]
-    ,
+        Center(
+          child: Text(
+            message,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: AppColors.white,
+              fontWeight: FontWeight.w900,
+              fontSize: 25.0.sp,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

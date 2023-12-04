@@ -1,13 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hive/hive.dart';
-
 import '../../../../../core/app_strings.dart';
 import '../../../../../core/enums.dart';
 import '../../../data/model/word_model.dart';
-
 part 'read_word_state.dart';
-
 part 'read_word_cubit.freezed.dart';
 
 class ReadWordCubit extends Cubit<ReadWordState> {
@@ -40,19 +37,21 @@ class ReadWordCubit extends Cubit<ReadWordState> {
     emit(const ReadWordState.loading());
     try {
       List<WordModel> returnedWords =
-          List.from(_box.get(AppStrings.wordsListKey, defaultValue: [])).cast<WordModel>();
+          List.from(_box.get(AppStrings.wordsListKey,defaultValue:[])).cast<WordModel>();
       _wordsFilter(returnedWords);
       _applySorting(returnedWords);
       emit(ReadWordState.loaded(returnedWords));
     } catch (error) {
       emit(const ReadWordState.error(
-          "we have problems in fetching word , please try again later"));
+          "we have problems in fetching word , please try again later",
+      ));
     }
   }
 
   void _wordsFilter(List<WordModel> returnedWords)
   {
-    if (languageFilter == LanguageFilter.allWords){
+    if (languageFilter == LanguageFilter.allWords)
+    {
       return;
     }
     for (var i = 0; i < returnedWords.length; i++)

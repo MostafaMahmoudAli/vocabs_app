@@ -8,6 +8,7 @@ import 'package:vocabs_note/features/layout/presentation/widgets/arabic_or_engli
 import 'package:vocabs_note/features/layout/presentation/widgets/custom_text_form_field.dart';
 
 import '../../../../core/custom_done_button.dart';
+import '../../../layout/presentation/cubits/read_word_cubit/read_word_cubit.dart';
 
 class SimilarWordOrExamplesDialog extends StatefulWidget {
   const SimilarWordOrExamplesDialog(
@@ -105,6 +106,7 @@ class _SimilarWordOrExamplesDialogState
                       {
                         context.read<WriteWordCubit>().addSimilarWord(widget.indexAtDataBase);
                       }
+                      context.read<ReadWordCubit>().fetchWords();
                     }
                   },
                 ),
