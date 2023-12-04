@@ -9,11 +9,12 @@ class WordInfoWidget extends StatelessWidget {
   final bool isArabic;
   final String text;
   final int colorCode;
-  final VoidCallback?onPressed;
+  final VoidCallback ?onPressed;
   @override
   Widget build(BuildContext context)
   {
     return Container(
+      margin:EdgeInsetsDirectional.only(bottom: 6.0.h),
       padding:EdgeInsetsDirectional.symmetric(horizontal:12.0.w,vertical:6.0.h),
       decoration:BoxDecoration(
         borderRadius:BorderRadius.circular(20.0.r),

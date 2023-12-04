@@ -22,7 +22,11 @@ class WordsGridItem extends StatelessWidget {
             ),
         ).then((value)
         {
-          context.read<ReadWordCubit>().fetchWords();
+          Future.delayed(const Duration(milliseconds:300)).then((value)
+          {
+            context.read<ReadWordCubit>().fetchWords();
+          });
+
         });
       },
       child: Container(
